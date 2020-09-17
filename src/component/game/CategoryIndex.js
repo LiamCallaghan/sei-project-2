@@ -25,7 +25,7 @@ class CategoryIndex extends React.Component {
       <div className="section">
         <div className="container">
           <div className="columns is-multiline">
-            {/* { this.state.categories.trivia_categories.map(category => (<Categories key={category.id} {...category} /> ) ) } */}
+            { this.state.categories.map(category => (<Categories key={category.id} {...category} /> ) ) }
           </div>
         </div>
       </div>
