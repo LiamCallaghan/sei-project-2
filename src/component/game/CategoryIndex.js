@@ -4,28 +4,32 @@ import Categories from './Categories'
 
 class CategoryIndex extends React.Component {
   state = {
-    categories: null 
+    categories: null
   }
-}
 
-async componentDidMount() {
-  const response = await getAllCategories()
-  this.setState({
-    categories: response.data
-  })
-}
 
-render() {
-  if (!this.state.categories) return null 
-  return (
-    <div className="section">
-      <div className="container">
-        <div className="columns is-multiple">
-          {this.state.categories.map(category => (<Categories key={categories.id} {...categories}/>
-          ))}
+  async componentDidMount() {
+    const response = await getAllCategories()
+    this.setState({
+      categories: response.data
+    })
+    console.log(response.data)
+  }
+
+  render() {
+    if (!this.state.categories) return null
+    return (
+      <div className="section">
+        <div className="container">
+          <div className="columns is-multiple">
+            {this.state.categories.map(category => (<Categories key={category.id} {...category} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+
 }
 
