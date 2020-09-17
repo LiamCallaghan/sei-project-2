@@ -14,6 +14,7 @@ class CategoryIndex extends React.Component {
     this.setState({
       categories: response.data
     })
+    console.log(this.state.categories)
   }
 
   render() {
@@ -22,8 +23,7 @@ class CategoryIndex extends React.Component {
       <div className="section">
         <div className="container">
           <div className="columns is-multiple">
-            {this.state.categories.map(category => (<Categories key={categories.id} {...categories}/>
-            ))}
+            {/* { this.state.categories.map(category => (<Categories key={category.id} {...category} /> ) ) } */}
           </div>
         </div>
       </div>
@@ -31,4 +31,4 @@ class CategoryIndex extends React.Component {
   }
 }
 
-export default CatagoryIndex
+export default CategoryIndex
