@@ -8,5 +8,5 @@ export const getAllCategories = () => {
 }
 
 export const getSingleCategory = id => {
-  return axios.get(`${baseUrl}/api.php?amount=${id}&type=multiple`)
+  return axios.get(`${baseUrl}/api.php?amount=10&category=${id}&type=multiple`)
 }

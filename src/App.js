@@ -13,8 +13,8 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/game" component={CategoryIndex}/>
         <Route path="/game/:id" component={Quiz}/>
+        <Route path="/game" component={CategoryIndex}/>
       </Switch>
     </BrowserRouter>
   )
