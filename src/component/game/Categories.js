@@ -2,8 +2,13 @@ import React from 'react'
 
 const Categories = () => {
   return (
-    null 
-  ) 
+    <>
+      <div className="column is-one-fifth"></div>
+      <div className="card">
+        <div className="card-header">CATE</div>
+      </div>
+    </>
+  )
 }
 
 // https://opentdb.com/api.php?amount=10&category=10&type=multiple
