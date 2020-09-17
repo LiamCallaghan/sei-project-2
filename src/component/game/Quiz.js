@@ -18,7 +18,7 @@ class Quiz extends React.Component {
 
   render() {
     if ( !this.state.questions ) return null
-    return <div>{this.state.questions.category}</div>
+    return <div>{this.state.questions}</div>
   }
 }
 

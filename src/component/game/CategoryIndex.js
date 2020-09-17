@@ -16,7 +16,7 @@ class CategoryIndex extends React.Component {
       categories: filterResponse
     })
     // console.log(this.state.categories.trivia_categories)
-    console.log(this.state.categories)
+    // console.log(this.state.categories)
   }
 
   render() {
