@@ -7,7 +7,8 @@ class Quiz extends React.Component {
     categories: null,
     questions: [],
     answers: [],
-    incorrect_answers: []
+    incorrect_answers: [], 
+    results: null
   }
 
   async componentDidMount() {
@@ -48,6 +49,12 @@ class Quiz extends React.Component {
       incorrect_answers: incorrect_answer
     })
     console.log(incorrect_answer)
+  }
+
+  results = (event) => {
+    if (this.event.value === correctAnswer) {
+      const gatherResult += 1
+    }
   }
 
 
