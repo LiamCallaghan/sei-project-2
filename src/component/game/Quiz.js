@@ -1,12 +1,14 @@
 import React from 'react'
 import { getSingleCategory } from '../../lib/api'
+
 class Quiz extends React.Component {
   state = {
     categories: null,
     questions: [],
     answers: [],
-    incorrectAnswers: [], 
-    results: null
+    incorrectAnswers: [],
+    results: null,
+    number: 0
   }
   async componentDidMount() {
     const catagoryId = this.props.match.params.id
@@ -37,18 +39,33 @@ class Quiz extends React.Component {
     })
   }
 
+  handleClick = async () => {
+    if (this.state.number >= 9) {
+      // console.log('WORKING')
+      this.props.history.push('./results')
+    }
+    const number = this.state.number += 1
+    this.setState({ number })
+  }
+
+
   render() {
     if (!this.state.questions) return null
-    const { questions, answers, incorrectAnswers } = this.state
-    const answersArray = incorrectAnswers[0]
+
+
+    const { questions, answers, incorrectAnswers, number } = this.state
+    const index = number
+    const answersArray = incorrectAnswers[index]
+
+    console.log(index)
     return (
       <section className="section">
         <div className="container">
-          <div>{questions[0]}</div>
+          <div>{questions[index]}</div>
           <div>
-            <button>{answers[0]}</button>
+            <button onClick={this.handleClick}>{answers[index]}</button>
             {answersArray && answersArray.map(item => {
-              return <button key={item}>{item}</button>
+              return <button onClick={this.handleClick} key={item}>{item}</button>
             })}
           </div>
         </div>

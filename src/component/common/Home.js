@@ -25,7 +25,7 @@ class Home extends React.Component {
       <section className="hero is-fullheight-with-navbar">
         <div className="hero-body">
           <div className="container" style={{ backgroundImage: `url(${this.state.image})` } } alt='space-image'>
-            <h1 className="title is-1 has-text-centered has-text-black">
+            <h1 className="title is-1 has-text-centered has-text-white">
               Quiz
             </h1>
           </div>
