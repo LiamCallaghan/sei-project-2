@@ -51,11 +51,11 @@ class Quiz extends React.Component {
     console.log(incorrect_answer)
   }
 
-  results = (event) => {
-    if (this.event.value === correctAnswer) {
-      const gatherResult += 1
-    }
-  }
+  // results = (event) => {
+  //   if (this.event.value === correctAnswer) {
+  //     const gatherResult += 1
+  //   }
+  // }
 
 
 

@@ -15,15 +15,15 @@ class CategoryIndex extends React.Component {
     this.setState({
       categories: filterResponse
     })
-    // console.log(this.state.categories.trivia_categories)
-    // console.log(this.state.categories)
+    console.log(this.state.categories.trivia_categories)
+    console.log(this.state.categories)
   }
 
   render() {
     if (!this.state.categories) return null 
     return (
       <div className="section">
-        <div className="container">
+        <div className="container animate__animated animate__bounce">
           <div className="columns is-multiline">
             { this.state.categories.map(category => (<Categories key={category.id} {...category} /> ) ) }
           </div>
