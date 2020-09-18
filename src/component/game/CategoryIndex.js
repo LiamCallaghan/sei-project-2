@@ -20,12 +20,12 @@ class CategoryIndex extends React.Component {
   }
 
   render() {
-    if (!this.state.categories) return null 
+    if (!this.state.categories) return null
     return (
       <div className="section">
         <div className="container">
           <div className="columns is-multiline is-centered">
-            { this.state.categories.map(category => (<Categories key={category.id} {...category} /> ) ) }
+            {this.state.categories.map(category => (<Categories key={category.id} {...category} />))}
           </div>
         </div>
       </div>
