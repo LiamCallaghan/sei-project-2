@@ -15,7 +15,8 @@ class Quiz extends React.Component {
     const catagoryId = this.props.match.params.id
     const response = await getSingleCategory(catagoryId)
     this.setState({
-      categories: response.data
+      categories: response.data,
+      results: null
     })
     this.questionLoop()
     this.answerLoop()
