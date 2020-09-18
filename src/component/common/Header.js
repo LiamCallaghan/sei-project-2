@@ -8,9 +8,6 @@ const Header = () => {
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">Home</Link>
-          <Link to="/game" className="navbar-item">Catagories Index</Link>
-          {/* <Link to="/game/:id" className="navbar-item">Quiz</Link> */}
-          <Link to='/game/results' className='navbar-item'>Results</Link>
         </div>
       </div>
     </nav>

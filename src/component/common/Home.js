@@ -1,5 +1,6 @@
 import React from 'react'
 import { getBackground } from '../../lib/api'
+import { Link } from 'react-router-dom'
 
 
 class Home extends React.Component {
@@ -28,10 +29,12 @@ class Home extends React.Component {
             <h1 className="title is-1 has-text-centered has-text-white">
               Quiz
             </h1>
+            <Link to='/game'>
+              <div className='box has-text-centered'>Click to start!</div>
+            </Link>
           </div>
         </div>
       </section>
-
     )
   }
 
