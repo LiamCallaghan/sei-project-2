@@ -11,8 +11,9 @@ class Home extends React.Component {
 
   async componentDidMount() {
     const response = await getBackground()
+    console.log(response)
     this.setState({
-      image: response.url
+      image: response.data.url
     })
     // console.log(response.data)
   }
@@ -23,7 +24,7 @@ class Home extends React.Component {
     return (
       <section className="hero is-fullheight-with-navbar">
         <div className="hero-body">
-          <div className="container"><img src={this.state.image} />
+          <div className="container" style={{ backgroundImage: `url(${this.state.image})` } } alt='space-image'>
             <h1 className="title is-1 has-text-centered has-text-black">
               Quiz
             </h1>
