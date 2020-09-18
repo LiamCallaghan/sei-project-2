@@ -8,7 +8,8 @@ class Quiz extends React.Component {
     answers: [],
     incorrectAnswers: [],
     results: null,
-    number: 0
+    number: 0,
+    score: 0
   }
   async componentDidMount() {
     const catagoryId = this.props.match.params.id
@@ -38,8 +39,17 @@ class Quiz extends React.Component {
       incorrectAnswers
     })
   }
-
   handleClick = async () => {
+    if (this.state.number >= 9) {
+      // console.log('WORKING')
+      this.props.history.push('./results')
+    }
+    const number = this.state.number += 1
+    const score = this.state.score += 1
+    this.setState({ number, score })
+  }
+
+  handleClick2 = async () => {
     if (this.state.number >= 9) {
       // console.log('WORKING')
       this.props.history.push('./results')
@@ -53,7 +63,7 @@ class Quiz extends React.Component {
     if (!this.state.questions) return null
 
 
-    const { questions, answers, incorrectAnswers, number } = this.state
+    const { questions, answers, incorrectAnswers, number, score } = this.state
     const index = number
     const answersArray = incorrectAnswers[index]
 
@@ -65,9 +75,10 @@ class Quiz extends React.Component {
           <div>
             <button onClick={this.handleClick}>{answers[index]}</button>
             {answersArray && answersArray.map(item => {
-              return <button onClick={this.handleClick} key={item}>{item}</button>
+              return <button onClick={this.handleClick2} key={item}>{item}</button>
             })}
           </div>
+          <div>Score: {score}</div>
         </div>
       </section>
     )
