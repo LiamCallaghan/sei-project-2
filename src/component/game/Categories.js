@@ -7,7 +7,7 @@ const Categories = ({ id, name }) => {
       <Link to={`/game/${id}`}>
         <div className='card'>
           <div className="card-header">
-            <h4 className="card-header-title">{name}</h4>
+            <h4 className="card-header-title has-text-centered">{name}</h4>
           </div>
         </div>
       </Link>
