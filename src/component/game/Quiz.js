@@ -20,7 +20,7 @@ class Quiz extends React.Component {
     this.questionLoop()
     this.answerLoop()
     this.incorrectLoop()
-    this.incorrectLoop2()
+    // this.incorrectLoop2()
 
   }
 
@@ -40,22 +40,26 @@ class Quiz extends React.Component {
     const incorrect_answers = this.state.categories.results.map(result => (result.incorrect_answers))
     this.setState({
       incorrect_answers
-    })
+    }, this.incorrectLoop2)
   }
 
   incorrectLoop2 = () => {
-    const incorrect_answer = this.state.categories.incorrect_answers.map(result => (result))
+    // console.log(this.state)
+    const incorrect_answer = this.state.incorrect_answers.map(result => result)
+    const answerPull = incorrect_answer.map(item => item)
+    const answerPull2 = answerPull.map(answer => answer)
+    console.log(answerPull2)
     this.setState({
       incorrect_answers: incorrect_answer
     })
-    console.log(incorrect_answer)
+    // console.log(incorrect_answer)
   }
 
-  results = (event) => {
-    if (this.event.value === correctAnswer) {
-      const gatherResult += 1
-    }
-  }
+  // results = (event) => {
+  //   if (this.event.value === correctAnswer) {
+  //     const gatherResult += 1
+  //   }
+  // }
 
 
 
