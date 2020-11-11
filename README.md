@@ -1,9 +1,9 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) GA London React Template
+# Hackathon Quiz
 
-`yarn start` to run the development server
+Simple react app built with the Open Trivia DB API. Pair coded.
 
-`yarn build` to create a build directory
+## Timeline
 
+Day 1: Planning, Wireframing, Git familiarity, Getting the data from the API, Creating the catagories page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Day 2: Creating the quiz, Randomizing the questions, Setting an end condition, Styling, Buttons, Trying to randomize answers & add images to catagories/home page, Using dangerouslysetinnerhtml.
